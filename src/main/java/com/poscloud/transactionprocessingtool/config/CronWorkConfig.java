@@ -27,7 +27,7 @@ public class CronWorkConfig {
         this.nmbrec = nmbrec;
     }
 
-    @Scheduled(cron = "0 00 01 * * *")//Run task everyday at 2am
+    @Scheduled(cron = "0 30 22 * * *")//Run task everyday at 1am
     public void copyTransactions()  {
         log.info("----------------Starting Cron job ");
         try {
