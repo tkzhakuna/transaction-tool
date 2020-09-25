@@ -1,0 +1,15 @@
+server:
+  port:
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: staging
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: lazy
+

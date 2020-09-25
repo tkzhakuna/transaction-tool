@@ -1,0 +1,48 @@
+server:
+  port : 9002
+tapcard:
+#TapCard DataSource
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    jdbc-url: "jdbc:mysql://144.91.64.122:3306/tapcard_prod?useSSL=false"
+    username: 'developer'
+    password: 'ch@ng3itDev'
+    #driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database: MYSQL
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+
+  application:
+    name: tapcard_transactions
+
+
+
+spring:
+  #Archive DataSource
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    jdbc-url: "jdbc:mysql://62.171.150.183:3306/tapcard_prod?useSSL=false&serverTimezone=Africa/Harare"
+    username: 'developer'
+    password: 'ch@ng3itDev'
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database: MYSQL
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    ROOT: info
+    org:
+      hibernate:
+        SQL: DEBUG
+        type.descriptor.sql.BasicBinder: TRACE
